@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="de">
+    <head>
+        <title>
+            Punktezähler
+        </title>
+    </head>
+    <body>
+        <button type="button" id="pluscount" onclick="plus()">PLUS</button>
+        <button type="button" id="minuscount" onclick="minus()">MINUS</button>
+        <button type="button" id="reset" onclick="reset()">RESET</button>
+
+        <h1>Punkte:</h1>
+        <h1 id="points"></h1>
+
+        <script>
+            "use strict"
+            let points = 0
+
+            function plus() {
+                points ++
+                refresh()
+            }
+
+            function minus() {
+                points --
+                refresh()
+            }
+
+            function reset() {
+                points = 0
+                refresh()
+            }
+
+            function refresh() {
+                document.getElementById("points").innerText = points
+            }
+
+            refresh()
+        </script>
+    </body>
+</html>
